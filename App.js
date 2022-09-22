@@ -35,20 +35,20 @@ export default function App() {
         <Text style={styles.sectionTitle}>ToDo List</Text>
 
         <KeyboardAvoidingView
-    behavior={Platform.OS ==='ios'?"padding":"height"}
-    style={styles.writeTaskWrapper}>
+        behavior={Platform.OS ==='ios'?"padding":"height"}
+        style={styles.writeTaskWrapper}>
 
-    <TextInput style={styles.input} placeholder={'Add new task'}
-      value={task}
-      onChangeText={text => setTask(text)}/>
+        <TextInput style={styles.input} placeholder={'Add new task'}
+          value={task}
+          onChangeText={text => setTask(text)}/>
 
-    <TouchableOpacity onPress={() => handleAddTask()}>
-      <View style={styles.addWrapper}>
-      <Entypo name="add-to-list" size={24} color="black" />
-      </View>
-    </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleAddTask()}>
+          <View style={styles.addWrapper}>
+          <Entypo name="add-to-list" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
 
-    </KeyboardAvoidingView>
+        </KeyboardAvoidingView>
 
         <View style={styles.items}>
         <ScrollView>
